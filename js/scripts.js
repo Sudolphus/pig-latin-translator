@@ -50,8 +50,15 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     const sentenceInput = $("input[name=sentence]").val();
+    if (!sentenceInput) {
+      alert('Enter a sentence');
+      return;
+    }
     const newSentence = pigLatinTranslate(sentenceInput);
 
-    $("#output").text(newSentence);
+    $("input[name=sentence]").val("");
+    $(".row").show();
+    $("#input").append("<li>" + sentenceInput + "</li>");
+    $("#output").append("<li>" + newSentence + "</li>");
   });
 });

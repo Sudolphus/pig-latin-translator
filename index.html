@@ -18,10 +18,24 @@
           <label for="sentence">Type your sentence to be translated:</label>
           <input type="text" name="sentence" class="form-control">
         </div>
-        <button type="submit" id="submit">Translate!</button>
+        <button type="submit" class="btn" id="submit">Translate!</button>
       </form>
 
-      <span id="output"></span>
+      <div class="row">
+        <div class="col-lg-6">
+          <p>Your sentence:</p>
+          <ol id="input">
+
+          </ol>
+        </div>
+        <div class="col-lg-6">
+          <p>Your sentence in Pig Latin:</p>
+          <ol id="output">
+
+          </ol>
+        </div>
+      </div>
+      
 
     </div>
   </body>
