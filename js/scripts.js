@@ -1,6 +1,7 @@
 //business logic
+const vowels = 'AEIOUaeiou'.split('');
+
 const startTest = function(str) {
-  const vowels = 'AEIOUaeiou'.split('');
   if (vowels.includes(str.charAt(0))) {
     return vowelStart(str);
   } else {
@@ -13,7 +14,18 @@ const vowelStart = function(str) {
 }
 
 const consonantStart = function(str) {
-  return str.slice(1) + str.slice(0, 1) + "ay";
+  let firstVowel;
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(str.charAt(i))) {
+      firstVowel = i;
+      break;
+    }
+  }
+  if (firstVowel) {
+    return str.slice(firstVowel) + str.slice(0, firstVowel) + "ay";
+  } else {
+    return str + 'ay';
+  }
 }
 
 //user interface logic
