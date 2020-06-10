@@ -13,8 +13,8 @@ const splitter = function(str) {
     if (firstVowel === 0) {
       return str + 'way';
     } else {
-      const qBlock = /^[^aeiouq]*(qu)?q?/i;
-      return str.split(qBlock)[str.split(qBlock).length-1] + str.match(qBlock)[0] + "ay";
+      const consonantBlock = /^[^aeiou]*((?<=q)u|(?!=u)[^aeiou])/i;
+      return str.split(consonantBlock)[str.split(consonantBlock).length-1] + str.match(consonantBlock)[0] + "ay";
     }
   }
 }
