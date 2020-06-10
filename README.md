@@ -47,7 +47,7 @@ Open via Bash/GitBash:
 
 ## Known Bugs
 
-_No bugs currently known_
+_Currently doesn't handle punctuation very well._
 
 ## Support and contact details
 

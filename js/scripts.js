@@ -9,8 +9,7 @@ const splitter = function(str) {
   if (str.search(/[\W\d_]/) > -1) {
     return str;
   } else {
-    const firstVowel = str.search(/[aeiou]/i);
-    if (firstVowel === 0) {
+    if (str.search(/[aeiou]/i) === 0) {
       return str + 'way';
     } else {
       const consonantBlock = /^[^aeiou]*((?<=q)u|(?!=u)[^aeiou])/i;
