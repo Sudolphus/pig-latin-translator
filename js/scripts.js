@@ -1,11 +1,11 @@
 //business logic
 const pigLatinTranslate = function(sentence) {
   const sentenceArray = sentence.split(' ');
-  const translatedArray = sentenceArray.map(startTest);
+  const translatedArray = sentenceArray.map(splitter);
   return translatedArray.join(' ');
 }
 
-const startTest = function(str) {
+const splitter = function(str) {
   if (str.search(/[\W\d_]/) > -1) {
     return str;
   } else {
@@ -13,13 +13,8 @@ const startTest = function(str) {
     if (firstVowel === 0) {
       return str + 'way';
     } else {
-      const qBlock = /^[^aeiou]*(qu)/i;
-      const cBlock = /^[^aeiou]+/i;
-      if (str.search(qBlock) > -1) {
-        return str.split(qBlock)[str.split(qBlock).length-1] + str.match(qBlock)[0] + "ay";
-      } else {
-        return str.split(cBlock)[str.split(cBlock).length-1] + str.match(cBlock)[0] + "ay";
-      }
+      const qBlock = /^[^aeiouq]*(qu)?q?/i;
+      return str.split(qBlock)[str.split(qBlock).length-1] + str.match(qBlock)[0] + "ay";
     }
   }
 }
