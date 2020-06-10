@@ -1,7 +1,4 @@
 //business logic
-const vowels = 'AEIOUaeiou'.split('');
-const consonants = 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz'.split('')
-
 const pigLatinTranslate = function(sentence) {
   const sentenceArray = sentence.split(' ');
   const translatedArray = sentenceArray.map(startTest);
@@ -9,39 +6,21 @@ const pigLatinTranslate = function(sentence) {
 }
 
 const startTest = function(str) {
-  for (let i = 0; i < str.length; i++) {
-    if (!vowels.includes(str.charAt(i)) && !consonants.includes(str.charAt(i))) {
-      return str;
-    }
-  }
-  if (vowels.includes(str.charAt(0))) {
-    return vowelStart(str);
+  if (str.search(/[\W\d_]/) > -1) {
+    return str;
   } else {
-    return consonantStart(str);
-  }
-}
-
-const vowelStart = function(str) {
-  return str + 'way';
-}
-
-const consonantStart = function(str) {
-  let firstVowel;
-  for (let i = 0; i < str.length; i++) {
-    if (vowels.includes(str.charAt(i))) {
-      firstVowel = i;
-      break;
+    const firstVowel = str.search(/[aeiou]/i);
+    if (firstVowel === 0) {
+      return str + 'way';
+    } else {
+      const qBlock = /^[^aeiou]*(qu)/i;
+      const cBlock = /^[^aeiou]+/i;
+      if (str.search(qBlock) > -1) {
+        return str.split(qBlock)[str.split(qBlock).length-1] + str.match(qBlock)[0] + "ay";
+      } else {
+        return str.split(cBlock)[str.split(cBlock).length-1] + str.match(cBlock)[0] + "ay";
+      }
     }
-  }
-  if (str.charAt(firstVowel-1) === "Q" || str.charAt(firstVowel-1) === "q") {
-    if (str.charAt(firstVowel) === "U" || str.charAt(firstVowel) === "u") {
-      firstVowel += 1;
-    }
-  }
-  if (firstVowel) {
-    return str.slice(firstVowel) + str.slice(0, firstVowel) + "ay";
-  } else {
-    return str + 'ay';
   }
 }
 
