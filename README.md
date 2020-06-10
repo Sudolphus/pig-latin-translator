@@ -12,16 +12,17 @@ _This application will take in a sentence, then return that sentence translated 
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
 | **Program Gathers User Input** | User input: "pants" | Output: "pants" |
-| **Program Ignores Non-Alphabetical Input**| User Input: "5%" | Output: "5%" |
-| **Program Adds "way" To Single-letter Vowel Words**| User input: "i" | Output: "iway" |
+| **Program Ignores Non-Alphabetical Input** | User Input: "5%" | Output: "5%" |
+| **Program Ignores Case** | User Input: "ApPlE" | Output: "ApPlE" |
+| **Program Adds "way" To Single-letter Vowel Words** | User input: "i" | Output: "iway" |
 | **Program Adds "ay" To Single-letter Consonants** | Input: "J" | Output: "Jay" |
 | **Program treats "y" as a Consonant** | Input: "Y" | Output: "Yay" |
-| **Program Adds "way" to Multiple-letter words that start with a vowel**| Input: "Apple" | Output: "Appleway" |
-| **Program Moves Starting Letter to End and Adds "ay" for words that start with a consonant**| Input: "Target" | Output: "argetTay" |
-| **Program Moves Starting Consonant Block to End and adds "ay" for words that start with multiple consonants**| Input: "Shop" | Output: "opShay" |
-| **Program Moves Following "u" if Word Starts With "q"**| Input: "queue" | Output: "euequay" |
-| **Program Moves Following "u" if Consonants Block includes "q"**| Input: "queue" | Output: "euequay" |
-| **Program Applies Above Rules For Multiple-word Sentences**| Input: "The cat meows" | Output: "eThay atcay eowsmay" |
+| **Program Adds "way" to Multiple-letter words that start with a vowel** | Input: "Apple" | Output: "Appleway" |
+| **Program Moves Starting Letter to End and Adds "ay" for words that start with a consonant** | Input: "Target" | Output: "argetTay" |
+| **Program Moves Starting Consonant Block to End and adds "ay" for words that start with multiple consonants** | Input: "Shop" | Output: "opShay" |
+| **Program Moves Following "u" if Word Starts With "q"** | Input: "queue" | Output: "euequay" |
+| **Program Moves Following "u" if Consonants Block includes "q"** | Input: "squirrel" | Output: "irrelsquay" |
+| **Program Applies Above Rules For Multiple-word Sentences** | Input: "The cat meows" | Output: "eThay atcay eowsmay" |
 
 ## Setup/Installation Requirements
 
