@@ -2,6 +2,12 @@
 const vowels = 'AEIOUaeiou'.split('');
 const consonants = 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz'.split('')
 
+const pigLatinTranslate = function(sentence) {
+  const sentenceArray = sentence.split(' ');
+  const translatedArray = sentenceArray.map(startTest);
+  return translatedArray.join(' ');
+}
+
 const startTest = function(str) {
   for (let i = 0; i < str.length; i++) {
     if (!vowels.includes(str.charAt(i)) && !consonants.includes(str.charAt(i))) {
@@ -44,7 +50,7 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     event.preventDefault();
     const sentenceInput = $("input[name=sentence]").val();
-    const newSentence = startTest(sentenceInput);
+    const newSentence = pigLatinTranslate(sentenceInput);
 
     $("#output").text(newSentence);
   });
