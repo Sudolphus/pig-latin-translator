@@ -1,12 +1,27 @@
-# _{Application Name}_
+# _Pig Latin Translator_
 
-#### _{Brief description of application}, {Date of current version}_
+#### _An application to translate sentences into Pig Latin, 6.10.2020_
 
-#### By _**Micheal Hansen**_
+#### By _**Micheal Hansen and Evgeniya Chernaya**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This application will take in a sentence, then return that sentence translated into pig latin._
+
+## Specs
+| Spec | Input | Output |
+| :-------------     | :------------- | :------------- |
+| **Program Gathers User Input** | User input: "pants" | Output: "pants" |
+| **Program Ignores Non-Alphabetical Input**| User Input: "5%" | Output: "5%" |
+| **Program Adds "way" To Single-letter Vowel Words**| User input: "i" | Output: "iway" |
+| **Program Adds "ay" To Single-letter Consonants** | Input: "J" | Output: "Jay" |
+| **Program treats "y" as a Consonant** | Input: "Y" | Output: "Yay" |
+| **Program Adds "way" to Multiple-letter words that start with a vowel**| Input: "Apple" | Output: "Appleway" |
+| **Program Moves Starting Letter to End and Adds "ay" for words that start with a consonant**| Input: "Target" | Output: "argetTay" |
+| **Program Moves Starting Consonant Block to End and adds "ay" for words that start with multiple consonants**| Input: "Shop" | Output: "opShay" |
+| **Program Moves Following "u" if Word Starts With "q"**| Input: "queue" | Output: "euequay" |
+| **Program Moves Following "u" if Consonants Block includes "q"**| Input: "queue" | Output: "euequay" |
+| **Program Applies Above Rules For Multiple-word Sentences**| Input: "The cat meows" | Output: "eThay atcay eowsmay" |
 
 ## Setup/Installation Requirements
 
@@ -20,8 +35,8 @@ Open by downloading:
 
 Open via Bash/GitBash:
 1. Clone this repository onto your computer:
-`git clone {PUT_REPO_HERE}`
-2. Navigate into the `{NAME_OF_DIRECTORY}` directory in Visual Studio Code or preferred text editor
+`git clone https://github.com/Sudolphus/pig-latin-translator.git`
+2. Navigate into the `pig-latin-translator` directory in Visual Studio Code or preferred text editor
 `code .`
 3. Open index.html in Chrome or preferred browser:
 `open index.html`
@@ -48,4 +63,4 @@ _Please reach out through my GitHub account._
 
 MIT License.
 
-Copyright (c) 2020 **_Micheal Hansen_**
+Copyright (c) 2020 **_Micheal Hansen and Evgeniya Chernaya_**
