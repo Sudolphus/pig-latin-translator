@@ -61,4 +61,10 @@ $(document).ready(function() {
     $("#input").append("<li>" + sentenceInput + "</li>");
     $("#output").append("<li>" + newSentence + "</li>");
   });
+
+  $('#reset').click(function() {
+    $("ol > li").remove();
+    $(".row").hide();
+    $("input[name=sentence]").val("");
+  });
 });
