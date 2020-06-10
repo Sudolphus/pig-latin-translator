@@ -1,7 +1,13 @@
 //business logic
 const vowels = 'AEIOUaeiou'.split('');
+const consonants = 'BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz'.split('')
 
 const startTest = function(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (!vowels.includes(str.charAt(i)) && !consonants.includes(str.charAt(i))) {
+      return str;
+    }
+  }
   if (vowels.includes(str.charAt(0))) {
     return vowelStart(str);
   } else {
@@ -19,6 +25,11 @@ const consonantStart = function(str) {
     if (vowels.includes(str.charAt(i))) {
       firstVowel = i;
       break;
+    }
+  }
+  if (str.charAt(firstVowel-1) === "Q" || str.charAt(firstVowel-1) === "q") {
+    if (str.charAt(firstVowel) === "U" || str.charAt(firstVowel) === "u") {
+      firstVowel += 1;
     }
   }
   if (firstVowel) {
