@@ -3,6 +3,10 @@
   margin-top: 30px;
 }
 
+.page-header {
+  text-align: center;
+}
+
 p {
   font-weight: bold;
 }

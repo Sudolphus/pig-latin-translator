@@ -6,7 +6,7 @@
 
 ## Description
 
-_This application will take in a sentence, then return that sentence translated into pig latin._
+_This application will take in a sentence, then return that sentence translated into pig latin. We worked hard, and finally got the Regex working. Hooray!_
 
 ## Specs
 | Spec | Input | Output |
@@ -47,7 +47,7 @@ Open via Bash/GitBash:
 
 ## Known Bugs
 
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_No bugs currently known_
 
 ## Support and contact details
 
